@@ -1,0 +1,51 @@
+Code Book;
+
+INPUT FILES
+Test Data Files:
+  subject_test.txt
+  X_test.txt
+  y_test.txt
+
+Taining Data Files:
+  subject_train.txt
+  X_train.txt
+  y_train.txt
+
+Activity Labels File:
+  activity_labels.txt
+
+Feature Names File:
+  features.txt
+
+Feature Names Description File:
+  features_info.txt
+
+
+OUTPUT FILE
+tidydata.txt
+
+Steps To produce tidydata.txt
+1. Software Used:
+	RStudio Version 1.0.143 – © 2009-2016 RStudio, Inc.
+2. R Packages Used
+	plyr
+	data.table
+3. Downloaded all the data INPUT files to the local directory:
+	"C:/Users/ABashir/Documents/CourseEra/Courses/3-CleaningData/Week4/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset"
+4. Read the Training data from the subdirectory "train"
+	dtSubjectTrain <- read.table("./train/subject_train.txt", header = FALSE)
+	dtXTrain <- read.table("./train/X_train.txt", header=FALSE)
+	dtYTrain <- read.table("./train/y_train.txt", header=FALSE)
+5. Read the test data from the subdirectory "test"
+	dtSubjectTest = read.table('./test/subject_test.txt',header=FALSE)
+	dtXTest = read.table('./test/x_test.txt',header=FALSE)
+	dtYTest = read.table('./test/y_test.txt',header=FALSE)
+
+6. Merged the training and the test corresponding data sets to create one data set for each data set.
+7. Extracted only the measurements on the mean and standard deviation for each measurement.
+8. Used descriptive activity names to name the activities in the data set
+9 Appropriately labeled the data set with descriptive variable names.
+10. Combined the processed data into one data set.
+11. Assigned descriptive names to the dataset columns 
+12. Created the aggregated data for the tidy data set (tidydata.txt.
+
